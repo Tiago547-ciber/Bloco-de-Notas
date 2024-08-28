@@ -58,6 +58,7 @@ function excluir() {
             d.remove("img");
             document.getElementById("fechar2").remove();
             mostrar();
+            window.alert(localStorage.getItem("mensagem"));
         });
         
         

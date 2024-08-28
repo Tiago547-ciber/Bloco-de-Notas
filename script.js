@@ -1,5 +1,5 @@
 localStorage.clear();
-var z = localStorage.getItem("mensagem);
+
 var tamanho = window.innerWidth;
 function menu() {
     document.getElementById("tela").innerHTML = '<button id="fechar" onclick="fechar()">x</button><br><button id="adicionar" onclick="ADD()">ADD</button><button id="excluir" onclick="excluir()">Excluir</button>';
@@ -58,6 +58,7 @@ function excluir() {
             d.remove("img");
             document.getElementById("fechar2").remove();
             mostrar();
+            var z = localStorage.getItem("mensagem);
             window.alert(z);
         });
         

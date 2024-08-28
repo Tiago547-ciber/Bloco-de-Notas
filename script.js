@@ -57,9 +57,10 @@ function excluir() {
             d.style.backgroundColor = "";
             d.remove("img");
             document.getElementById("fechar2").remove();
-            mostrar();
             var z = localStorage.getItem("mensagem");
             window.alert(z);
+            mostrar();
+            
         });
         
         

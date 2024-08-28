@@ -246,7 +246,7 @@ function enviar() {
     var a = document.getElementById('mensagem');
     var b = document.getElementById('data');
     var arq = document.getElementById('imagem').value;
-    var x = arq.split("fakepath", 2);
+    var x = arq.split("fakepath\\", 2);
     var imagem = document.createElement("img");
     if (localStorage.getItem("mensagem") == null || localStorage.getItem("mensagem") == "") {
         localStorage.setItem("mensagem", a.value);

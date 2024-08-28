@@ -267,8 +267,9 @@ function enviar() {
         imagem.style.height = "150px";
         
         /*Altere o caminho abaixo para o local onde as fotos da sua camera ficam armazenadas.*/
-        imagem.src = arq;
+        imagem.src = '../DCIM/Camera/'+x[1];
         
+        window.alert(x[1]);
         d.append(imagem);
         mostrar();
     }

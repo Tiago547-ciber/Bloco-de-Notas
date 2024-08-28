@@ -31,7 +31,7 @@ function fechar() {
 
 function ADD() {
     
-    document.getElementById("tela").innerHTML = '<button id="fechar" onclick="fechar()">x</button><br><form><ui>Insira uma imagem</ui><br><br><input type="file" id="imagem" accept="image/jpeg, image/png"><br><br><ui>Data</ui><br><input type="date" id="data"><br><br><ui>Digite seu lembrete.</ui><br><input id="mensagem" type="text" ></form><br><br><button id="enviar" onclick="enviar()">Enviar</button>';
+    document.getElementById("tela").innerHTML = '<button id="fechar" onclick="fechar()">x</button><br><form><ui>Insira uma imagem</ui><br><br><input type="file" id="imagem" accept="image/jpeg, image/png" required ><br><br><ui>Data</ui><br><input type="date" id="data" required><br><br><ui>Digite seu lembrete.</ui><br><input id="mensagem" type="text" required ></form><br><br><button id="enviar" onclick="enviar()">Enviar</button>';
     var a = document.getElementById("tela");
     a.style.border = 'solid 2px black';
     a.style.borderLeft = 'none';

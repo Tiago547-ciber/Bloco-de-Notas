@@ -45,15 +45,16 @@ function excluir() {
     if (localStorage.getItem("mensagem") !=  null || localStorage.getItem("mensagem") == "") {
         var a = document.getElementById("tela2");
         var botao = document.createElement("button");
-        var imagem = document.getElementById("imagem1");
         botao.id = 'fechar2';
         botao.addEventListener('click', function() {
             localStorage.removeItem("mensagem");
             localStorage.removeItem("data");
-            a.style.border = '';
-            a.style.width = "0px";
-            a.style.height = "0px";
-            a.style.backgroundColor = "";
+            var d = document.getElementById("tela2");
+            d.style.border = '';
+            d.style.width = "0px";
+            d.style.height = "0px";
+            d.style.backgroundColor = "";
+            var imagem = document.getElementById("imagem1");
             imagem.src = '';
             document.getElementById("fechar2").remove();
             document.getElementById("tela2").innerHTML = '<p id="texto1"></p><p id="texto2"></p>';
@@ -79,7 +80,6 @@ function excluir() {
     if (localStorage.getItem("mensagem2") != null || localStorage.getItem("mensagem2") == "") {
         var a = document.getElementById("tela3");
         var botao = document.createElement("button");
-        var imagem = document.getElementById("imagem2");
         botao.id = 'fechar3';
         botao.addEventListener('click', function() {
             localStorage.removeItem("mensagem2");
@@ -90,6 +90,7 @@ function excluir() {
             d.style.height = "0px";
             d.style.backgroundColor = "";
             a.style.marginLeft = tamanho/2+'px';
+            var imagem = document.getElementById("imagem2");
             imagem.src = '';
             document.getElementById("fechar3").remove();
             document.getElementById("tela3").innerHTML = '<p id="texto3"></p><p id="texto4"></p>';
@@ -110,7 +111,6 @@ function excluir() {
         var a = document.getElementById("tela4");
         a.style.marginLeft = tamanho/2+'px';
         var botao = document.createElement("button");
-        var imagem = document.getElementById("imagem3");
         botao.id = 'fechar4';
         botao.addEventListener('click', function() {
             localStorage.removeItem("mensagem3");
@@ -120,6 +120,7 @@ function excluir() {
             d.style.width = "0px";
             d.style.height = "0px";
             d.style.backgroundColor = "";
+            var imagem = document.getElementById("imagem3");
             imagem.src = '';
             document.getElementById("fechar4").remove();
             document.getElementById("tela4").innerHTML = '<p id="texto5"></p><p id="texto6"></p>';
@@ -140,7 +141,6 @@ function excluir() {
         var a = document.getElementById("tela5");
         a.style.marginLeft = tamanho/2+'px';
         var botao = document.createElement("button");
-        var imagem = document.getElementById("imagem4");
         botao.id = 'fechar5';
         botao.addEventListener('click', function() {
             localStorage.removeItem("mensagem4");
@@ -150,6 +150,7 @@ function excluir() {
             d.style.width = "0px";
             d.style.height = "0px";
             d.style.backgroundColor = "";
+            var imagem = document.getElementById("imagem4");
             imagem.src = '';
             document.getElementById("fechar5").remove();
             document.getElementById("tela5").innerHTML = '<p id="texto7"></p><p id="texto8"></p>';
@@ -170,7 +171,6 @@ function excluir() {
         var a = document.getElementById("tela6");
         a.style.marginLeft = tamanho/2+'px';
         var botao = document.createElement("button");
-        var imagem = document.getElementById("imagem5");
         botao.id = 'fechar6';
         botao.addEventListener('click', function() {
             localStorage.removeItem("mensagem5");
@@ -180,6 +180,7 @@ function excluir() {
             d.style.width = "0px";
             d.style.height = "0px";
             d.style.backgroundColor = "";
+            var imagem = document.getElementById("imagem5");
             imagem.src = '';
             document.getElementById("fechar4").remove();
             document.getElementById("tela6").innerHTML = '<p id="texto9"></p><p id="texto10"></p>';
@@ -200,7 +201,6 @@ function excluir() {
         var a = document.getElementById("tela7");
         a.style.marginLeft = tamanho/2+'px';
         var botao = document.createElement("button");
-        var imagem = document.getElementById("imagem6");
         botao.id = 'fechar7';
         botao.addEventListener('click', function() {
             localStorage.removeItem("mensagem6");
@@ -210,6 +210,7 @@ function excluir() {
             d.style.width = "0px";
             d.style.height = "0px";
             d.style.backgroundColor = "";
+            var imagem = document.getElementById("imagem6");
             imagem.src = '';
             document.getElementById("fechar7").remove();
             document.getElementById("tela7").innerHTML = '<p id="texto11"></p><p id="texto12"></p>';

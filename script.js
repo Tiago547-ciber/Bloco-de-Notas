@@ -365,12 +365,13 @@ function enviar() {
              d.style.width = "400px";
              d.style.height = "420px";
              d.style.backgroundColor = "white";
+             d.style.marginLeft = tamanho/3.5+'px';
              imagem.style.width = "200px";
              imagem.style.height = "150px";
              imagem.id = "imagem5";
         
         /*Altere o caminho abaixo para o local onde as fotos da sua camera ficam armazenadas.*/
-             imagem.src = '../DCIM/Camera'+x[1];
+             imagem.src = '../DCIM/Camera/'+x[1];
         
              d.append(imagem);
             mostrar();
@@ -380,29 +381,30 @@ function enviar() {
             localStorage.setItem("data6", b.value);
             document.getElementById("tela").innerHTML = '<div id="tela"></div>';
             var c = document.getElementById("tela");
-             var d = document.getElementById("tela7");
+            var d = document.getElementById("tela7");
             c.style.border = '';
             c.style.width = '0px';
             c.style.height = '0px';
-             d.style.border = 'solid 2px black';
-             d.style.width = "400px";
-             d.style.height = "420px";
-             d.style.backgroundColor = "white";
-             imagem.style.width = "200px";
-             imagem.style.height = "150px";
-             imagem.id = "imagem6";
+            d.style.border = 'solid 2px black';
+            d.style.width = "400px";
+            d.style.height = "420px";
+            d.style.backgroundColor = "white";
+            d.style.marginLeft = tamanho/3.5+'px';
+            imagem.style.width = "200px";
+            imagem.style.height = "150px";
+            imagem.id = "imagem6";
         
         /*Altere o caminho abaixo para o local onde as fotos da sua camera ficam armazenadas.*/
-             imagem.src = '../DCIM/Camera'+x[1];
+            imagem.src = '../DCIM/Camera/'+x[1];
         
-             d.append(imagem);
+            d.append(imagem);
             mostrar();
          }
      
     
     else {
-        
         window.alert("Memoria cheia. Exclua um Slot.");
+        event.preventDefault();
     }
 }};
 

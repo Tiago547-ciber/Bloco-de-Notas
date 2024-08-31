@@ -1,6 +1,6 @@
 localStorage.clear();
-
 var tamanho = window.innerWidth;
+var arq = document.getElementById('imagem');
 function menu() {
     document.getElementById("tela").innerHTML = '<button id="fechar" onclick="fechar()">x</button><br><button id="adicionar" onclick="ADD()">ADD</button><button id="excluir" onclick="excluir()">Excluir</button>';
     var a = document.getElementById("tela");
@@ -17,7 +17,7 @@ function menu() {
     document.getElementById("fechar5").remove();
     document.getElementById("fechar6").remove();
     document.getElementById("fechar7").remove();
-    document.getElementById("Slot 1").remove();
+    
 }
 
 function fechar() {
@@ -31,35 +31,35 @@ function fechar() {
 
 function ADD() {
     
-    document.getElementById("tela").innerHTML = '<button id="fechar" onclick="fechar()">x</button><br><form><ui>Insira uma imagem</ui><br><br><input type="file" id="imagem" accept="image/jpeg, image/png" required ><br><br><ui>Data</ui><br><input type="date" id="data" required><br><br><ui>Digite seu lembrete.</ui><br><input id="mensagem" type="text" required ></form><br><br><button id="enviar" onclick="enviar()">Enviar</button>';
+    document.getElementById("tela").innerHTML = '<form><button id="fechar" onclick="fechar()">x</button><br><ui>Insira uma imagem</ui><br><br><input type="file" id="imagem" accept="image/jpeg, image/png" required><br><br><ui>Data</ui><br><input type="date" id="data" required><br><br><ui>Digite seu lembrete.</ui><br><input id="mensagem" type="text" required></form><br><br><button id="enviar" onclick="enviar()">Enviar</button>';
     var a = document.getElementById("tela");
     a.style.border = 'solid 2px black';
     a.style.borderLeft = 'none';
     a.style.borderTop = 'none';
     a.style.width = '290px';
-    a.style.height = '265px';
+    a.style.height = '290px';
     
 }
-
 function excluir() {
     
     if (localStorage.getItem("mensagem") !=  null || localStorage.getItem("mensagem") == "") {
         var a = document.getElementById("tela2");
         var botao = document.createElement("button");
+        var imagem = document.getElementById("imagem1");
         botao.id = 'fechar2';
         botao.addEventListener('click', function() {
             localStorage.removeItem("mensagem");
             localStorage.removeItem("data");
-            var d = document.getElementById("tela2");
-            d.style.border = '';
-            d.style.width = "0px";
-            d.style.height = "0px";
-            d.style.backgroundColor = "";
-            d.remove("img");
+            a.style.border = '';
+            a.style.width = "0px";
+            a.style.height = "0px";
+            a.style.backgroundColor = "";
+            imagem.src = '';
             document.getElementById("fechar2").remove();
+            document.getElementById("tela2").innerHTML = '<p id="texto1"></p><p id="texto2"></p>';
             
-            mostrar();
-            
+           
+             mostrar();
         });
         
         
@@ -79,7 +79,7 @@ function excluir() {
     if (localStorage.getItem("mensagem2") != null || localStorage.getItem("mensagem2") == "") {
         var a = document.getElementById("tela3");
         var botao = document.createElement("button");
-        
+        var imagem = document.getElementById("imagem2");
         botao.id = 'fechar3';
         botao.addEventListener('click', function() {
             localStorage.removeItem("mensagem2");
@@ -90,8 +90,9 @@ function excluir() {
             d.style.height = "0px";
             d.style.backgroundColor = "";
             a.style.marginLeft = tamanho/2+'px';
-            d.remove("img");
+            imagem.src = '';
             document.getElementById("fechar3").remove();
+            document.getElementById("tela3").innerHTML = '<p id="texto3"></p><p id="texto4"></p>';
             
             mostrar();
         });
@@ -109,6 +110,7 @@ function excluir() {
         var a = document.getElementById("tela4");
         a.style.marginLeft = tamanho/2+'px';
         var botao = document.createElement("button");
+        var imagem = document.getElementById("imagem3");
         botao.id = 'fechar4';
         botao.addEventListener('click', function() {
             localStorage.removeItem("mensagem3");
@@ -118,8 +120,10 @@ function excluir() {
             d.style.width = "0px";
             d.style.height = "0px";
             d.style.backgroundColor = "";
-            d.remove("img");
+            imagem.src = '';
             document.getElementById("fechar4").remove();
+            document.getElementById("tela4").innerHTML = '<p id="texto5"></p><p id="texto6"></p>';
+            
             mostrar();
         });
         botao.append("Deletar 3");
@@ -136,6 +140,7 @@ function excluir() {
         var a = document.getElementById("tela5");
         a.style.marginLeft = tamanho/2+'px';
         var botao = document.createElement("button");
+        var imagem = document.getElementById("imagem4");
         botao.id = 'fechar5';
         botao.addEventListener('click', function() {
             localStorage.removeItem("mensagem4");
@@ -145,8 +150,10 @@ function excluir() {
             d.style.width = "0px";
             d.style.height = "0px";
             d.style.backgroundColor = "";
-            d.remove("img");
+            imagem.src = '';
             document.getElementById("fechar5").remove();
+            document.getElementById("tela5").innerHTML = '<p id="texto7"></p><p id="texto8"></p>';
+            
             mostrar();
         });
         botao.append("Deletar 4");
@@ -163,6 +170,7 @@ function excluir() {
         var a = document.getElementById("tela6");
         a.style.marginLeft = tamanho/2+'px';
         var botao = document.createElement("button");
+        var imagem = document.getElementById("imagem5");
         botao.id = 'fechar6';
         botao.addEventListener('click', function() {
             localStorage.removeItem("mensagem5");
@@ -172,8 +180,10 @@ function excluir() {
             d.style.width = "0px";
             d.style.height = "0px";
             d.style.backgroundColor = "";
-            d.remove("img");
+            imagem.src = '';
             document.getElementById("fechar4").remove();
+            document.getElementById("tela6").innerHTML = '<p id="texto9"></p><p id="texto10"></p>';
+            
             mostrar();
         });
         botao.append("Deletar 5");
@@ -190,6 +200,7 @@ function excluir() {
         var a = document.getElementById("tela7");
         a.style.marginLeft = tamanho/2+'px';
         var botao = document.createElement("button");
+        var imagem = document.getElementById("imagem6");
         botao.id = 'fechar7';
         botao.addEventListener('click', function() {
             localStorage.removeItem("mensagem6");
@@ -199,8 +210,10 @@ function excluir() {
             d.style.width = "0px";
             d.style.height = "0px";
             d.style.backgroundColor = "";
-            d.remove("img");
+            imagem.src = '';
             document.getElementById("fechar7").remove();
+            document.getElementById("tela7").innerHTML = '<p id="texto11"></p><p id="texto12"></p>';
+            
             mostrar();
         });
         botao.append("Deletar 6");
@@ -216,40 +229,26 @@ function excluir() {
     else {
         "";
     }
+
+
+
 }
 
-function editar() {
-    var tela = document.getElementById("tela");
-    var botao = document.createElement('button');
-    if (localStorage.getItem("mensagem") != null || localStorage.getItem("mensagem") == "") {
-        tela.remove('button');
-        botao.id = 'Slot 1';
-        botao.append('Alterar');
-        botao.style.margin = "90px 130px";
-        botao.addEventListener('click', function() {
-            tela.innerHTML = '<button id="fechar" onclick="fechar()">x</button><br><form><ui>Insira uma imagem</ui><br><br><input type="file" id="imagem" accept="image/jpeg, image/png"><br><br><ui>Data</ui><br><input type="date" id="data"><br><br><ui>Digite seu lembrete.</ui><br><input id="mensagem" type="text" ></form><br><br><button id="enviar" onclick="enviar()">Enviar</button>';
-            tela.style.border = 'solid 2px black';
-            tela.style.borderLeft = 'none';
-            tela.style.borderTop = 'none';
-            tela.style.width = '290px';
-            tela.style.height = '265px';
-            mostrar();
-        });
-        tela2.append(botao);
-    }
-    else {
-        "";
-    }
-}
-
-
- 
 function enviar() {
+    
+    
     var a = document.getElementById('mensagem');
+    var validA = document.getElementById('mensagem').value;
     var b = document.getElementById('data');
+    var validB = document.getElementById('data').value;
     var arq = document.getElementById('imagem').value;
     var x = arq.split("fakepath\\", 2);
     var imagem = document.createElement("img");
+    if (validA == null || validA == "" || validB == null || validB == "" || arq == null || arq == "") {
+        window.alert("Por favor. Prencha todas as informações solicitadas.");
+    }
+    else {
+    
     if (localStorage.getItem("mensagem") == null || localStorage.getItem("mensagem") == "") {
         localStorage.setItem("mensagem", a.value);
         localStorage.setItem("data", b.value);
@@ -267,13 +266,14 @@ function enviar() {
         d.style.marginLeft = tamanho/3.5+'px';
         imagem.style.width = "200px";
         imagem.style.height = "150px";
+        imagem.id = "imagem1";
+         
         
         /*Altere o caminho abaixo para o local onde as fotos da sua camera ficam armazenadas.*/
-        imagem.src = x[1];
-        
-        window.alert(x[1]);
+        imagem.src = '../DCIM/Camera/'+x[1];
         d.append(imagem);
         mostrar();
+       
     }
     
         else if ( localStorage.getItem("mensagem2") == null || localStorage.getItem("mensagem2") == "") {
@@ -289,15 +289,18 @@ function enviar() {
             d.style.width = "400px";
             d.style.height = "420px";
             d.style.backgroundColor = "white";
+            d.style.marginLeft = tamanho/3.5+'px';
             imagem.style.width = "200px";
             imagem.style.height = "150px";
+            imagem.id = "imagem2";
             
             /*Altere o caminho abaixo para o local onde as fotos da sua camera ficam armazenadas.*/
-            imagem.src = '../DCIM/Camera'+x[1];
+            imagem.src = '../DCIM/Camera/'+x[1];
             
             d.append(imagem);
             mostrar();
         }
+    
          else if ( localStorage.getItem("mensagem3") == null || localStorage.getItem("mensagem3") == "") {
             localStorage.setItem("mensagem3", a.value);
             localStorage.setItem("data3", b.value);
@@ -311,12 +314,14 @@ function enviar() {
              d.style.width = "400px";
              d.style.height = "420px";
              d.style.backgroundColor = "white";
+             d.style.marginLeft = tamanho/3+'px';
              imagem.style.width = "200px";
              imagem.style.height = "150px";
+             imagem.id = "imagem3";
              
              /*Altere o caminho abaixo para o local onde as fotos da sua camera ficam armazenadas.*/
              
-             imagem.src = '../DCIM/Camera'+x[1];
+             imagem.src = '../DCIM/Camera/'+x[1];
              
              d.append(imagem);
             mostrar();
@@ -334,12 +339,14 @@ function enviar() {
              d.style.width = "400px";
              d.style.height = "420px";
              d.style.backgroundColor = "white";
+             d.style.marginLeft = tamanho/3.5+'px';
              imagem.style.width = "200px";
              imagem.style.height = "150px";
+             imagem.id = "imagem4";
         
         /*Altere o caminho abaixo para o local onde as fotos da sua camera ficam armazenadas.*/
          
-             imagem.src = '../DCIM/Camera'+x[1];
+             imagem.src = '../DCIM/Camera/'+x[1];
         
              d.append(imagem);
             mostrar();
@@ -359,6 +366,7 @@ function enviar() {
              d.style.backgroundColor = "white";
              imagem.style.width = "200px";
              imagem.style.height = "150px";
+             imagem.id = "imagem5";
         
         /*Altere o caminho abaixo para o local onde as fotos da sua camera ficam armazenadas.*/
              imagem.src = '../DCIM/Camera'+x[1];
@@ -381,9 +389,10 @@ function enviar() {
              d.style.backgroundColor = "white";
              imagem.style.width = "200px";
              imagem.style.height = "150px";
+             imagem.id = "imagem6";
         
         /*Altere o caminho abaixo para o local onde as fotos da sua camera ficam armazenadas.*/
-             imagem.src = './'+x[1];
+             imagem.src = '../DCIM/Camera'+x[1];
         
              d.append(imagem);
             mostrar();
@@ -391,9 +400,12 @@ function enviar() {
      
     
     else {
+        
         window.alert("Memoria cheia. Exclua um Slot.");
     }
-}
+}};
+
+
 function mostrar() {
     document.getElementById("texto1").innerHTML = localStorage.getItem("mensagem");
     document.getElementById("texto2").innerHTML = localStorage.getItem("data");

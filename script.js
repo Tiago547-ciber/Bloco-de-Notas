@@ -2,15 +2,15 @@ localStorage.clear();
 var tamanho = window.innerWidth;
 var arq = document.getElementById('imagem');
 function menu() {
-    document.getElementById("tela").innerHTML = '<button id="fechar" onclick="fechar()">x</button><br><button id="adicionar" onclick="ADD()">ADD</button><button id="excluir" onclick="excluir()">Excluir</button>';
+    document.getElementById("tela").innerHTML = '<button id="fechar" onclick="fechar()">x</button><br><button id="adicionar" onclick="ADD()">ADD</button><button id="excluir" onclick="excluir()">Excluir</button><button id ="conf" onclick="config()">CONFIG.</button>';
     var a = document.getElementById("tela");
     a.style.animation = "abrir 0.5s";
     a.style.border = 'solid 2px black';
     a.style.borderLeft = 'none';
     a.style.borderTop = 'none';
-    a.style.width = '280px';
+    a.style.width = '300px';
     a.style.height = '170px';
-    a.style.marginLeft = tamanho/3+'px';
+    a.style.marginLeft = tamanho/3.5+'px';
     document.getElementById("fechar2").remove();
     document.getElementById("fechar3").remove();
     document.getElementById("fechar4").remove();
@@ -31,7 +31,7 @@ function fechar() {
 
 function ADD() {
     
-    document.getElementById("tela").innerHTML = '<form><button id="fechar" onclick="fechar()">x</button><br><ui>Insira uma imagem</ui><br><br><input type="file" id="imagem" accept="image/jpeg, image/png" required><br><br><ui>Data</ui><br><input type="date" id="data" required><br><br><ui>Digite seu lembrete.</ui><br><input id="mensagem" type="text" required></form><br><br><button id="enviar" onclick="enviar()">Enviar</button>';
+    document.getElementById("tela").innerHTML = '<form><button id="fechar" onclick="fechar()">x</button><br><ui>Insira uma imagem</ui><br><br><input type="file" id="imagem" accept="image/jpeg, image/png" required><br><br><ui>Insira uma Data</ui><br><input type="date" id="data" required><br><br><ui>Digite seu lembrete.</ui><br><input id="mensagem" type="text" required></form><br><br><button id="enviar" onclick="enviar()">Enviar</button>';
     var a = document.getElementById("tela");
     a.style.border = 'solid 2px black';
     a.style.borderLeft = 'none';
@@ -40,6 +40,29 @@ function ADD() {
     a.style.height = '290px';
     
 }
+
+function config() {
+    
+    var option = '<h2>Plano de fundo.</h2><div><p class="color1"></p><p class="color2"></p><p class="color3"></p><p class="color4"></p></div><form><input class="inputColor1" name="escolha" type="radio" value="whitesmoke"><br><input class="inputColor2" name="escolha" type="radio" value="#87CEFA"><br><input class="inputColor3" name="escolha" type="radio" value="#ec5353"><br><input class="inputColor4" name="escolha" type="radio" value="#7ba05b"></form><br><button id="aplicar" onclick="change()">Aplicar</button>';
+    var a = document.getElementById("tela");
+    a.innerHTML = option;
+    a.style.border = 'solid 2px black';
+    a.style.borderLeft = 'none';
+    a.style.borderTop = 'none';
+    a.style.width = '290px';
+    a.style.height = '310px';
+    
+}
+
+function change() {
+    var cor = document.querySelector('input[name="escolha"]:checked');
+    var body = document.querySelector("body");
+    
+    localStorage.setItem("estilo", cor.value);
+    body.style.backgroundColor = localStorage.getItem("estilo");
+    
+}
+
 function excluir() {
     
     if (localStorage.getItem("mensagem") !=  null || localStorage.getItem("mensagem") == "") {

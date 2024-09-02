@@ -1,14 +1,15 @@
-
 body {
-  background: linear-gradient( gray 20%, white 80%);
-  height: 800px;
+  background-color: whitesmoke;
 }
+
 #title {
   font-family: sans-serif;
   text-align: center;
   margin: 20px 130px;
   
 }
+
+
 
 #menu {
   border: solid 2px black;
@@ -24,6 +25,16 @@ body {
 #enviar {
   width: 290px;
   height: 40px;
+  border: solid 2px black;
+  border-left: none;
+  border-top: none;
+  border-radius: 5px;
+}
+
+#aplicar {
+  width: 290px;
+  height: 40px;
+  margin-top: 130px;
   border: solid 2px black;
   border-left: none;
   border-top: none;
@@ -56,13 +67,21 @@ body {
 #adicionar {
   font-family: sans-serif;
   text-align: center;
-  margin: 40px 15px;
+  margin: 40px 5px;
   width: 80px;
   height: 50px;
 }
 
 
 #excluir{
+  font-family: sans-serif;
+  text-align: center;
+  margin: 40px 15px;
+  width: 80px;
+  height: 50px;
+}
+
+#conf{
   font-family: sans-serif;
   text-align: center;
   margin-top: 40px;
@@ -74,6 +93,7 @@ body {
 #mensagem {
   width: 250px;
   height: 50px;
+  border: solid 2px black;
 }
 #tela2 {
   font-family: sans-serif;
@@ -113,6 +133,80 @@ body {
   
 }
 
+.color1{
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: whitesmoke;
+  margin: 30px 100px;
+  z-index: 1;
+  position:absolute;
+  border: solid 2px black;
+}
+
+.color2{
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: #87CEFA;
+  margin: 70px 100px;
+  z-index: 1;
+  position:absolute;
+  border: solid 2px black;
+}
+
+.color3{
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: #ec5353;
+  margin: 110px 100px;
+  z-index: 1;
+  position:absolute;
+  border: solid 2px black;
+}
+
+.color4{
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: #7ba05b;
+  margin: 150px 100px;
+  z-index: 1;
+  position:absolute;
+  border: solid 2px black;
+}
+
+
+
+.inputColor1 {
+  margin: 40px 20px;
+  z-index: 2;
+  position:absolute;
+  
+}
+
+.inputColor2 {
+  margin: 60px 20px;
+  z-index: 2;
+  position:absolute;
+  
+}
+
+.inputColor3 {
+  margin: 83px 20px;
+  z-index: 2;
+  position:absolute;
+  
+}
+
+.inputColor4 {
+  margin: 105px 20px;
+  z-index: 2;
+  position:absolute;
+  
+}
+
 @keyframes abrir {
   from {
     border: "";
@@ -140,5 +234,16 @@ body {
     width: 0px;
     height: 0px;
     font-size: 0px;
+  }
+}
+@keyframes color1 {
+  25% {
+    background-color: white;
+  }
+  50% {
+    background-color: wheat;
+  }
+  100% {
+    background-color: white;
   }
 }

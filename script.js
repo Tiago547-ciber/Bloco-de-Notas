@@ -1,10 +1,10 @@
 localStorage.clear();
-
+const body = document.querySelector("body");
 var tamanho = window.innerWidth;
 var arq = document.getElementById('imagem');
 window.onload = function verificar() {
     if (tamanho > 1500px) {
-        window.alert("Este site funciona somente por celular");
+        body.append("Este site funciona somente por celular");
     }else {
         "";
     }

@@ -5,10 +5,6 @@ var arq = document.getElementById('imagem');
 if (tamanho > 1500px) {
     body.append("Este site funciona somente por celular");
 }
-else {
-    "";
-}
-}
 
 function menu() {
     document.getElementById("tela").innerHTML = '<button id="fechar" onclick="fechar()">x</button><br><button id="adicionar" onclick="ADD()">ADD</button><button id="excluir" onclick="excluir()">Excluir</button><button id ="conf" onclick="config()">CONFIG.</button>';

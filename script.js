@@ -2,7 +2,7 @@ localStorage.clear();
 var body = document.querySelector('body');
 var tamanho = window.innerWidth;
 var arq = document.getElementById('imagem');
-if (tamanho > 900) {
+if (tamanho > 1500) {
     
     body.remove('tela');
     body.createElement('h1');

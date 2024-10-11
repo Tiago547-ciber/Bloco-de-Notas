@@ -2,8 +2,12 @@ localStorage.clear();
 
 var tamanho = window.innerWidth;
 var arq = document.getElementById('imagem');
-if (tamanho > 1500px) {
-    window.alert("Este site funciona somente por celular");
+window.onload = function verificar() {
+    if (tamanho > 1500px) {
+        window.alert("Este site funciona somente por celular");
+    }else {
+        "";
+    }
 }
 
 function menu() {

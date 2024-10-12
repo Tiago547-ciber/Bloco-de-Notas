@@ -3,7 +3,7 @@ localStorage.clear();
 var tamanho = window.innerWidth;
 var arq = document.getElementById('imagem');
 
-menu = function () {
+function menu() {
     document.getElementById("tela").innerHTML = '<button id="fechar" onclick="fechar()">x</button><br><button id="adicionar" onclick="ADD()">ADD</button><button id="excluir" onclick="excluir()">Excluir</button><button id ="conf" onclick="config()">CONFIG.</button>';
     var a = document.getElementById("tela");
     a.style.animation = "abrir 0.5s";

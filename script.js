@@ -2,15 +2,7 @@ localStorage.clear();
 var body = document.querySelector('body');
 var tamanho = window.innerWidth;
 var arq = document.getElementById('imagem');
-if (tamanho > 1500) {
-    
-    body.remove('tela');
-    body.createElement('h1');
-    body.id = "mensagem";
-    body.append('Estamos criando a versão para computador. Por favor acesse o site pelo celular.");
-}else {
-    "";
-}
+
 function menu() {
     document.getElementById("tela").innerHTML = '<button id="fechar" onclick="fechar()">x</button><br><button id="adicionar" onclick="ADD()">ADD</button><button id="excluir" onclick="excluir()">Excluir</button><button id ="conf" onclick="config()">CONFIG.</button>';
     var a = document.getElementById("tela");
@@ -440,7 +432,15 @@ function enviar() {
         event.preventDefault();
     }
 }};
-
+if (tamanho > 1500) {
+    
+    body.remove('tela');
+    body.createElement('h1');
+    body.id = "mensagem";
+    body.append('Estamos criando a versão para computador. Por favor acesse o site pelo celular.");
+}else {
+    "";
+}
 
 function mostrar() {
     document.getElementById("texto1").innerHTML = localStorage.getItem("mensagem");

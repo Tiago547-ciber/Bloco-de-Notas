@@ -1,8 +1,18 @@
 localStorage.clear();
-var body = document.querySelector('body');
-var tamanho = window.innerWidth;
-var arq = document.getElementById('imagem');
+var body = document.querySelector("body");
+var title = document.querySelector("#title");
+var button = document.querySelector("button");
 
+
+var tamanho = window.innerWidth;
+var h1 = document.createElement("h1");
+var arq = document.getElementById('imagem');
+if (tamanho > 1500) {
+    title.remove("title");
+    button.remove("tela");
+    h1.append("O site não suporta este dispositivo.");
+    body.append(h1);
+}
 function menu() {
     document.getElementById("tela").innerHTML = '<button id="fechar" onclick="fechar()">x</button><br><button id="adicionar" onclick="ADD()">ADD</button><button id="excluir" onclick="excluir()">Excluir</button><button id ="conf" onclick="config()">CONFIG.</button>';
     var a = document.getElementById("tela");

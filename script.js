@@ -7,7 +7,7 @@ var button = document.querySelector("button");
 var tamanho = window.innerWidth;
 var h1 = document.createElement("h1");
 var arq = document.getElementById('imagem');
-if (tamanho > 1000) {
+if (tamanho > 900) {
     title.remove("title");
     button.remove("tela");
     h1.append("O site não suporta este dispositivo.");
